@@ -1,82 +1,68 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
-<title>娃娃团队可用节点监测</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/wawacm/monitor/favicon.ico" type="image/x-icon"/>
-<script src="https://cdn.jsdelivr.net/gh/wawacm/monitor/config.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/wawacm/wawacdnjs/monitor/static/css/main.9d11a12e.css" rel="stylesheet">
-<style>
-body {
-    background-color: #010012;
-    background-image: linear-gradient(#010012, #111f4c, #010012);
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel="shortcut icon" href="https://newcdnjs.wawacm.com/favicon.ico" type="image/x-icon"><title>Public Status</title><script src="https://newcdnjs.wawacm.com/monitor/config.js"></script><script defer="defer" src="https://newcdnjs.wawacm.com/monitor/main.ace24a8b.js"></script><link href="https://newcdnjs.wawacm.com/monitor/main.e4003dc1.css" rel="stylesheet"><style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style><style data-react-tooltip="true">.__react_component_tooltip {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  left: -999em;
+  opacity: 0;
+  padding: 8px 21px;
+  position: fixed;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  top: -999em;
+  visibility: hidden;
+  z-index: 999;
 }
-#header .navi {
-    font-size: 15px;
-    font-weight: 600;
+.__react_component_tooltip.allow_hover, .__react_component_tooltip.allow_click {
+  pointer-events: auto;
 }
-#uptime .timeline i.ok {
-    background: #2195f3bb;
+.__react_component_tooltip::before, .__react_component_tooltip::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
 }
-#uptime .timeline i.down {
-    background: #f34539bb;
+.__react_component_tooltip.show {
+  opacity: 0.9;
+  margin-top: 0;
+  margin-left: 0;
+  visibility: visible;
 }
-#uptime .timeline i.none {
-    background: #2196f326;
+.__react_component_tooltip.place-top::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
 }
-#uptime .meta .status.down {
-    background-image: url();
-    color: #f34539bb;
-    font-weight: 600;
+.__react_component_tooltip.place-bottom::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: -8px;
+  left: 50%;
+  margin-left: -10px;
 }
-
-#uptime .timeline i {
-    border-radius: 10px;
+.__react_component_tooltip.place-left::before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  right: -8px;
+  top: 50%;
+  margin-top: -5px;
 }
-#uptime .meta .status.ok {
-    background-image: url();
-    color: #2195f3bb;
-    font-weight: 600;
+.__react_component_tooltip.place-right::before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  left: -8px;
+  top: 50%;
+  margin-top: -5px;
 }
-#uptime .meta .name {
-    font-weight: 600;
-}
-#uptime .foot {
-    color: #757a80;
-    font-weight: 600;
-}
-#uptime .timeline {
-    height: 55px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-#footer a {
-    color: #999fa6;
-    font-weight: 700;
-}
-#header .logo {
-    font-size: 18px;
-    font-weight: 700;
-    color: #2195f3;
-}
-#uptime .item {
-    padding: 18px 20px;
-    border-bottom: 1px solid #c5def6;
-}
-#uptime {
- 
-    border: 0px solid #e3e4e6;
-}
-#uptime .item {
-     
-    border-bottom: 15px solid #060923;
-}
-</style>
-</head>
-<body>
-<div id="app"></div><script src="https://cdn.jsdelivr.net/gh/wawacm/wawacdnjs/monitor/static/js/main.b23dcefe.js">
-</script>
-</body>
-</html>
+.__react_component_tooltip .multi-line {
+  display: block;
+  padding: 2px 0;
+  text-align: center;
+}</style>
+<script type="text/javascript">
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script></head><body><div id="app"></div></body></html>
